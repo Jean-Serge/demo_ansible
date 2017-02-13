@@ -1,0 +1,42 @@
+version: '2'
+services:
+  ssh_1:
+    image: ssh-test
+    ports:
+      - '2222:22'
+  ssh_2:
+    image: ssh-test
+    ports:
+      - '2223:22'
+  ssh_3:
+    image: ssh-test
+    ports:
+      - '2224:22'
+  ssh_4:
+    image: ssh-test
+    ports:
+      - '2225:22'
+  ssh_5:
+    image: ssh-test
+    ports:
+      - '2226:22'
+  ssh_6:
+    image: ssh-test
+    ports:
+      - '2227:22'
+  ssh_7:
+    image: ssh-test
+    ports:
+      - '2228:22'
+  ssh_8:
+    image: ssh-test
+    ports:
+      - '2229:22'
+  ssh_9:
+    image: ssh-test
+    ports:
+      - '2220:22'
+  ssh_10:
+    image: ssh-test
+    ports:
+      - '2221:22'

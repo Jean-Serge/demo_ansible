@@ -1,0 +1,22 @@
+ssh_1
+ssh_2
+ssh_3
+ssh_4
+ssh_5
+ssh_6
+ssh_7
+ssh_8
+ssh_9
+ssh_10
+
+[ruby]
+ssh_1 ruby_version=2.3
+ssh_2 ruby_version=2.2
+ssh_3 ruby_version=2.3
+ssh_7 ruby_version=2.2
+ssh_9 ruby_version=2.4
+ssh_10 ruby_version=2.4
+
+[ruby:vars]
+rails_version=5.0.1
+

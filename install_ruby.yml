@@ -1,0 +1,48 @@
+
+---
+- hosts: all
+  tasks:
+    - name: Install global dependencies
+      apt: 
+        name: '{{ item }}'
+        state: present
+        update_cache: yes
+      with_items:
+        - git
+        - software-properties-common
+        - build-essential
+        - patch
+        - nodejs
+        - npm
+        - libssl-dev
+        - libsqlite3-dev
+        - zlib1g-dev
+        - liblzma-dev
+        - libpq-dev
+
+    - name: Add ruby repository
+      apt_repository:
+        repo: 'ppa:brightbox/ruby-ng'
+        state: present
+
+    - name: Install wanted ruby version
+      apt:
+        name: '{{ item }}'
+        state: present
+        update_cache: yes
+      with_items:
+        - 'ruby{{ ruby_version }}'
+        - 'ruby{{ ruby_version }}-dev'
+
+    - name: Install gem bundler
+      gem:
+        name: bundler
+        state: present
+        user_install: no
+
+    - name: Install gem rails
+      gem:
+        name: rails
+        state: present
+        user_install: no
+        version: '{{ rails_version }}'
